@@ -22,10 +22,6 @@ object Dependencies {
     const val navigationCompose =
         "androidx.navigation:navigation-compose:${Versions.navigationComposeVersion}"
 
-    const val hilt = "com.google.dagger:hilt-android:${Versions.daggerVersion}"
-    const val workManager = "androidx.hilt:hilt-work:${Versions.composeHilt}"
-    const val compiler = "com.google.dagger:hilt-compiler:${Versions.daggerVersion}"
-    const val composeCompiler = "androidx.hilt:hilt-compiler:${Versions.composeHilt}"
-    const val hiltNavigationCompose =
-        "androidx.hilt:hilt-navigation-compose:${Versions.composeHilt}"
+    const val dagger = "com.google.dagger:hilt-android:${Versions.daggerVersion}"
+    const val compiler = "com.google.dagger:dagger-compiler:${Versions.daggerVersion}"
 }

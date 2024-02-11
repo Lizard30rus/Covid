@@ -10,7 +10,6 @@ const val coreKtxVersion = "1.12.0"
     const val activityComposeVersion  = "1.8.0"
     const val viewModelComposeVersion  = "2.6.2"
     const val navigationComposeVersion  = "2.7.5"
-    const val daggerVersion  = "2.44"
-    const val composeHilt  = "1.0.0"
+    const val daggerVersion  = "2.50"
     const val coroutineVersion  = "1.7.3"
 }

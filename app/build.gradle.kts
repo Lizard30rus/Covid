@@ -2,7 +2,6 @@ plugins {
     id(Plugins.androidApplication)
     id(Plugins.kotlinAndroid)
     id(Plugins.kotlinKapt)
-    id(Plugins.daggerHiltAndroidPlugin)
 }
 
 android {
@@ -29,11 +28,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -55,10 +54,7 @@ dependencies {
         implementation(coroutines)
         implementation(appCompat)
 
-        implementation(hilt)
-        implementation(hiltNavigationCompose)
-        implementation(workManager)
-        kapt(composeCompiler)
+        implementation(dagger)
         kapt(compiler)
 
         implementation(activity)
