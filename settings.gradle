@@ -15,3 +15,11 @@ dependencyResolutionManagement {
 rootProject.name = "Covid"
 include ':app'
 include ':core_data'
+include ':core_navigation'
+include ':core_data:core_database'
+include ':food'
+include ':alcohol'
+include ':alcohol:core_alcohol'
+include ':alcohol:feature_alcohol'
+include ':food:core_food'
+include ':food:feature_food'

@@ -63,4 +63,16 @@ dependencies {
         implementation(material3)
         debugImplementation(uiToolingDebug)
     }
+    with(Modules) {
+        
+        implementation(project(core_data))
+        
+        implementation(project(core_navigation))
+        
+        implementation(project(core_alcohol))
+        implementation(project(feature_alcohol))
+
+        implementation(project(core_food))
+        implementation(project(feature_food))
+    }
 }
