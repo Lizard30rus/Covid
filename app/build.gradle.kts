@@ -6,14 +6,14 @@ plugins {
 
 android {
     namespace = "com.example.covid"
-    compileSdk =  34
+    compileSdk =  Release.compileSdk
 
     defaultConfig {
         applicationId = "com.example.covid"
-        minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        minSdk = Release.minSdk
+        targetSdk = Release.targetSdk
+        versionCode = Release.versionCode
+        versionName = Release.versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {

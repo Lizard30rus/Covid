@@ -11,9 +11,22 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/alcohol" />
+            <option value="$PROJECT_DIR$/alcohol/core_alcohol" />
+            <option value="$PROJECT_DIR$/alcohol/core_alcohol/core_alcohol_api" />
+            <option value="$PROJECT_DIR$/alcohol/core_alcohol/core_alcohol_impl" />
+            <option value="$PROJECT_DIR$/alcohol/feature_alcohol" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/core_data" />
+            <option value="$PROJECT_DIR$/core_data/core_database" />
+            <option value="$PROJECT_DIR$/core_navigation" />
+            <option value="$PROJECT_DIR$/core_ui" />
+            <option value="$PROJECT_DIR$/food" />
+            <option value="$PROJECT_DIR$/food/core_food" />
+            <option value="$PROJECT_DIR$/food/core_food/core_food_api" />
+            <option value="$PROJECT_DIR$/food/core_food/core_food_impl" />
+            <option value="$PROJECT_DIR$/food/feature_food" />
           </set>
         </option>
       </GradleProjectSettings>

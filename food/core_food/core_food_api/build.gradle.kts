@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.feature_alcohol"
+    namespace = "com.example.core_food_api"
     compileSdk = Release.compileSdk
 
     defaultConfig {
@@ -30,12 +30,6 @@ android {
     }
     kotlinOptions {
         jvmTarget = "17"
-    }
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion ="1.4.8"
     }
 }
 

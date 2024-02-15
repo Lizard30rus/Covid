@@ -4,8 +4,8 @@ plugins {
 }
 
 android {
-    namespace = "com.example.feature_alcohol"
-    compileSdk = Release.compileSdk
+    namespace = "com.example.core_alcohol_api"
+    compileSdk =  Release.compileSdk
 
     defaultConfig {
         minSdk = Release.minSdk
@@ -30,12 +30,6 @@ android {
     }
     kotlinOptions {
         jvmTarget = "17"
-    }
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion ="1.4.8"
     }
 }
 

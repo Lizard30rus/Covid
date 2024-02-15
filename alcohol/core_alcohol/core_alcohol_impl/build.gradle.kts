@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.feature_alcohol"
+    namespace = "com.example.core_alcohol_impl"
     compileSdk = Release.compileSdk
 
     defaultConfig {
@@ -31,15 +31,10 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion ="1.4.8"
-    }
 }
 
 dependencies {
+    api(project(Modules.core_alcohol_api))
     with(Dependencies) {
         implementation(coreKtx)
         implementation(lifecycle)

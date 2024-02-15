@@ -1,16 +1,16 @@
 plugins {
-    id(Plugins.androidApplication)
+    id(Plugins.androidLibrary)
     id(Plugins.kotlinAndroid)
     id(Plugins.kotlinKapt)
 }
 
 android {
     namespace = "com.example.feature_food"
-    compileSdk = 33
+    compileSdk = Release.compileSdk
 
     defaultConfig {
-        minSdk = 24
-        targetSdk = 33
+        minSdk = Release.minSdk
+        targetSdk = Release.targetSdk
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -25,20 +25,25 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
+    }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion ="1.4.8"
     }
 }
 
 dependencies {
-
-    implementation("androidx.core:core-ktx:1.8.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.11.0")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    with(Dependencies) {
+        implementation(coreKtx)
+        implementation(lifecycle)
+        implementation(coroutines)
+        implementation(appCompat)
+    }
 }
