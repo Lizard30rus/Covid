@@ -1,6 +1,7 @@
 plugins {
     id(Plugins.androidLibrary)
     id(Plugins.kotlinAndroid)
+    id(Plugins.parcelize)
 }
 
 android {
@@ -31,8 +32,22 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion ="1.4.8"
+    }
 }
 
 dependencies {
+
+    with(Dependencies) {
+        implementation(navigationCompose)
+        implementation(coreKtx)
+        implementation(lifecycle)
+        implementation(coroutines)
+        implementation(appCompat)
+    }
 
 }

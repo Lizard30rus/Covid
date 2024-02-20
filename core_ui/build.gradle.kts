@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.core_ui"
-    compileSdk =  Release.compileSdk
+    compileSdk = Release.compileSdk
 
     defaultConfig {
         minSdk = Release.minSdk
@@ -31,8 +31,25 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.4.8"
+    }
 }
 
 dependencies {
+    with(Dependencies) {
 
+        implementation(coreKtx)
+        implementation(appCompat)
+
+        implementation(activity)
+        implementation(ui)
+        implementation(uiToolingPreview)
+        implementation(material3)
+        debugImplementation(uiToolingDebug)
+    }
 }

@@ -16,12 +16,14 @@ object Dependencies {
     const val material3 =
         "androidx.compose.material3:material3:${Versions.materialVersion}"
     const val activity =
-        "androidx.activity:activity-compose:${Versions.activityComposeVersion}"
+        "androidx.activity:activity-compose:${Versions.activityCompose}"
     const val composeViewModel =
-        "androidx.lifecycle:lifecycle-viewmodel-compose:${Versions.viewModelComposeVersion}"
+        "androidx.lifecycle:lifecycle-viewmodel-compose:${Versions.viewModelCompose}"
     const val navigationCompose =
-        "androidx.navigation:navigation-compose:${Versions.navigationComposeVersion}"
+        "androidx.navigation:navigation-compose:${Versions.navigationCompose}"
 
     const val dagger = "com.google.dagger:hilt-android:${Versions.daggerVersion}"
     const val compiler = "com.google.dagger:dagger-compiler:${Versions.daggerVersion}"
+
+    const val navigation = "androidx.navigation:navigation-compose:${Versions.navigationCompose}"
 }

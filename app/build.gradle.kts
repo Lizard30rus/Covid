@@ -58,15 +58,20 @@ dependencies {
         kapt(compiler)
 
         implementation(activity)
+        implementation(composeViewModel)
+        implementation(navigationCompose)
+
         implementation(ui)
         implementation(uiToolingPreview)
         implementation(material3)
         debugImplementation(uiToolingDebug)
+
     }
     with(Modules) {
         
         implementation(project(core_data))
-        
+        implementation(project(core_ui))
+
         implementation(project(core_navigation))
         
         implementation(project(core_alcohol))

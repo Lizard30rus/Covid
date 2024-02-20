@@ -45,5 +45,13 @@ dependencies {
         implementation(lifecycle)
         implementation(coroutines)
         implementation(appCompat)
+        implementation(activity)
+        implementation(composeViewModel)
+        implementation(navigationCompose)
+
+        implementation(ui)
+        implementation(uiToolingPreview)
+        implementation(material3)
+        debugImplementation(uiToolingDebug)
     }
 }
