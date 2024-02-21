@@ -7,7 +7,7 @@ import androidx.navigation.navigation
 import com.example.core_navigation.composable
 import com.example.core_navigation.routes.graphs.AlcoholEnterDestination
 import com.example.core_navigation.routes.screens.alcohol.AlcoholListDestination
-import com.example.core_ui.composables.top_bar.AppBarState
+import com.example.core_ui.composables.top_bar.states.AppBarState
 import com.example.feature_alcohol.list.AlcoholListScreen
 
 fun NavGraphBuilder.alcoholGraph(
@@ -21,7 +21,7 @@ fun NavGraphBuilder.alcoholGraph(
             showBottomMenu = true,
             destination = AlcoholListDestination
         ) {
-            AlcoholListScreen()
+            AlcoholListScreen(navController, onAppBarState)
         }
     }
 

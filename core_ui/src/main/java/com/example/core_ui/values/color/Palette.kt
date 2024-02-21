@@ -14,5 +14,6 @@ object Palette {
 
 
     val White = Color(0xFFFFFFFF)
+    val Black = Color(0XFF1A1A1E)
 
 }

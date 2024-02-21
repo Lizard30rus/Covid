@@ -55,9 +55,7 @@ internal fun BottomBar(
                 )
             }
         }
-
     }
-
 }
 
 private fun onClickItem(

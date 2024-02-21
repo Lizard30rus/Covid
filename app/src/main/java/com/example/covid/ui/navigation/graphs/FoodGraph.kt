@@ -7,7 +7,7 @@ import androidx.navigation.navigation
 import com.example.core_navigation.composable
 import com.example.core_navigation.routes.graphs.FoodEnterDestination
 import com.example.core_navigation.routes.screens.food.FoodListDestination
-import com.example.core_ui.composables.top_bar.AppBarState
+import com.example.core_ui.composables.top_bar.states.AppBarState
 import com.example.feature_food.list.FoodListScreen
 
 fun NavGraphBuilder.foodGraph(
@@ -21,7 +21,7 @@ fun NavGraphBuilder.foodGraph(
             showBottomMenu = true,
             destination = FoodListDestination
         ) {
-            FoodListScreen()
+            FoodListScreen(navController, onAppBarState)
         }
     }
 

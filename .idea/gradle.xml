@@ -22,6 +22,11 @@
             <option value="$PROJECT_DIR$/core_data/core_database" />
             <option value="$PROJECT_DIR$/core_navigation" />
             <option value="$PROJECT_DIR$/core_ui" />
+            <option value="$PROJECT_DIR$/favorites" />
+            <option value="$PROJECT_DIR$/favorites/core_favorites" />
+            <option value="$PROJECT_DIR$/favorites/core_favorites/core_favorites_api" />
+            <option value="$PROJECT_DIR$/favorites/core_favorites/core_favorites_impl" />
+            <option value="$PROJECT_DIR$/favorites/feature_favorites" />
             <option value="$PROJECT_DIR$/food" />
             <option value="$PROJECT_DIR$/food/core_food" />
             <option value="$PROJECT_DIR$/food/core_food/core_food_api" />

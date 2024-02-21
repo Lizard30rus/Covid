@@ -1,4 +1,4 @@
-package com.example.core_ui.composables.top_bar
+package com.example.core_ui.composables.top_bar.states
 
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.runtime.Composable

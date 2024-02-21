@@ -79,5 +79,8 @@ dependencies {
 
         implementation(project(core_food))
         implementation(project(feature_food))
+
+        implementation(project(core_favorites))
+        implementation(project(feature_favorites))
     }
 }

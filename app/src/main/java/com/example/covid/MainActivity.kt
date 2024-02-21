@@ -3,6 +3,7 @@ package com.example.covid
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
@@ -20,10 +21,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import com.example.core_navigation.bottomBarStateFlow
 import com.example.core_navigation.routes.graphs.FoodEnterDestination
-import com.example.core_navigation.routes.screens.SplashScreenDestination
 import com.example.core_navigation.states.BottomBarState
-import com.example.core_navigation.states.TopBarState
-import com.example.core_ui.composables.top_bar.AppBarState
+import com.example.core_ui.composables.top_bar.states.AppBarState
 import com.example.covid.ui.navigation.graphs.globalGraph
 import com.example.covid.ui.navigation.models.NavigationItem
 import com.example.covid.ui.theme.CovidTheme
@@ -50,17 +49,17 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MainContent(navController: NavHostController) {
     val context = LocalContext.current
-    val topBarState = remember { mutableStateOf(TopBarState.Gone) }
     val bottomBarState = navController.bottomBarStateFlow().collectAsState(BottomBarState.Gone)
     val navigationItems = listOf(
         NavigationItem.Food,
+        NavigationItem.Favorites,
         NavigationItem.Alcohol
     )
     val (appBarState, onAppBarState) = remember {
         mutableStateOf<AppBarState>(AppBarState.WithoutAppBar())
     }
     Scaffold(
-        topBar = { appBarState.appBar },
+        topBar = { Column(content = appBarState.appBar) },
         bottomBar = {
             BottomBar(
                 navigationItems = navigationItems,

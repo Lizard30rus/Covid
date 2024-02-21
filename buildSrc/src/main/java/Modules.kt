@@ -18,4 +18,9 @@ object Modules {
     const val core_alcohol_api = ":alcohol:core_alcohol:core_alcohol_api"
     const val core_alcohol_impl = ":alcohol:core_alcohol:core_alcohol_impl"
     const val feature_alcohol = ":alcohol:feature_alcohol"
+
+    const val core_favorites = ":favorites:core_favorites"
+    const val core_favorites_api = ":favorites:core_favorites:core_favorites_api"
+    const val core_favorites_impl = ":favorites:core_favorites:core_favorites_impl"
+    const val feature_favorites = ":favorites:feature_favorites"
 }

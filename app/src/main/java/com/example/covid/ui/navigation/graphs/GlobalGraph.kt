@@ -5,7 +5,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import com.example.core_navigation.composable
 import com.example.core_navigation.routes.screens.SplashScreenDestination
-import com.example.core_ui.composables.top_bar.AppBarState
+import com.example.core_ui.composables.top_bar.states.AppBarState
 import com.example.covid.ui.views.SplashScreen
 
 fun NavGraphBuilder.globalGraph(
