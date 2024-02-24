@@ -25,5 +25,7 @@ object Dependencies {
     const val dagger = "com.google.dagger:hilt-android:${Versions.daggerVersion}"
     const val compiler = "com.google.dagger:dagger-compiler:${Versions.daggerVersion}"
 
-    const val navigation = "androidx.navigation:navigation-compose:${Versions.navigationCompose}"
+    const val roomCompiler  = "androidx.room:room-compiler:${Versions.roomVersion}"
+    const val roomRuntime  = "androidx.room:room-runtime:${Versions.roomVersion}"
+    const val roomKtx  = "androidx.room:room-ktx:${Versions.roomVersion}"
 }

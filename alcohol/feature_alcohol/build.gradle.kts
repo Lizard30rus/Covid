@@ -55,8 +55,9 @@ dependencies {
         debugImplementation(uiToolingDebug)
     }
     with(Modules) {
-        implementation(project(core_food))
+        implementation(project(core_alcohol))
         implementation(project(core_navigation))
         implementation(project(core_ui))
+        implementation(project(core_common))
     }
 }

@@ -17,4 +17,5 @@ const val coreKtxVersion = "1.12.0"
     const val navigationCompose  = "2.7.7"
     const val daggerVersion  = "2.50"
     const val coroutineVersion  = "1.7.3"
+    const val roomVersion = "2.6.1"
 }

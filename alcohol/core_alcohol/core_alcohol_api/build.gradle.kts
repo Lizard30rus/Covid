@@ -40,4 +40,8 @@ dependencies {
         implementation(coroutines)
         implementation(appCompat)
     }
+
+    with(Modules) {
+        implementation(project(core_common))
+    }
 }

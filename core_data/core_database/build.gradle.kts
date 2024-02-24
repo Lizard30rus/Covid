@@ -1,6 +1,7 @@
 plugins {
     id(Plugins.androidLibrary)
     id(Plugins.kotlinAndroid)
+    id(Plugins.kotlinKapt)
 }
 
 android {
@@ -34,5 +35,16 @@ android {
 }
 
 dependencies {
+    with(Dependencies) {
+        implementation(coreKtx)
 
+        implementation(roomRuntime)
+        implementation(roomKtx)
+        kapt(roomCompiler)
+
+        implementation(dagger)
+        kapt(compiler)
+
+
+    }
 }

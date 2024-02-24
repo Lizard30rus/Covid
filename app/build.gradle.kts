@@ -70,7 +70,11 @@ dependencies {
     with(Modules) {
         
         implementation(project(core_data))
+        implementation(project(core_database))
+
         implementation(project(core_ui))
+
+        implementation(project(core_common))
 
         implementation(project(core_navigation))
         

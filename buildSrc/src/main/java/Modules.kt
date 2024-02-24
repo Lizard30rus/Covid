@@ -9,6 +9,8 @@ object Modules {
 
     const val  core_ui = ":core_ui"
 
+    const val core_common = ":core_common"
+
     const val core_food = ":food:core_food"
     const val core_food_api = ":food:core_food:core_food_api"
     const val core_food_impl = ":food:core_food:core_food_impl"

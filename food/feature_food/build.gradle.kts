@@ -58,5 +58,6 @@ dependencies {
         implementation(project(core_food))
         implementation(project(core_navigation))
         implementation(project(core_ui))
+        implementation(project(core_common))
     }
 }
