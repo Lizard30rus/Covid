@@ -1,6 +1,7 @@
 plugins {
     id(Plugins.androidLibrary)
     id(Plugins.kotlinAndroid)
+    id(Plugins.kotlinKapt)
 }
 
 android {
@@ -34,5 +35,18 @@ android {
 }
 
 dependencies {
+    with(Dependencies) {
+        implementation(coreKtx)
 
+        implementation(dagger)
+        kapt(compiler)
+    }
+
+    with(Modules) {
+        implementation(project(core_common))
+
+        implementation(project(core_alcohol))
+        implementation(project(core_food))
+        implementation(project(core_database))
+    }
 }

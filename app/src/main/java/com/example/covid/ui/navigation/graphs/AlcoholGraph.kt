@@ -9,13 +9,15 @@ import com.example.core_navigation.routes.graphs.AlcoholEnterDestination
 import com.example.core_navigation.routes.screens.alcohol.AlcoholDetailDestination
 import com.example.core_navigation.routes.screens.alcohol.AlcoholListDestination
 import com.example.core_ui.composables.top_bar.states.AppBarState
-import com.example.feature_food.detail.FoodDetailScreen
+import com.example.feature_alcohol.detail.AlcoholDetailScreen
+import com.example.feature_alcohol.di.AlcoholComponent
 import com.example.feature_alcohol.list.AlcoholListScreen
 
 fun NavGraphBuilder.alcoholGraph(
     context: Context,
+    alcoholComponent: AlcoholComponent,
     navController: NavController,
-    onAppBarState : (AppBarState) -> Unit
+    onAppBarState: (AppBarState) -> Unit,
 ) {
     navigation(AlcoholListDestination.route(), AlcoholEnterDestination.route()) {
 
@@ -23,14 +25,18 @@ fun NavGraphBuilder.alcoholGraph(
             showBottomMenu = true,
             destination = AlcoholListDestination
         ) {
-            AlcoholListScreen(navController, onAppBarState)
+            AlcoholListScreen(navController, alcoholComponent.getListViewModel(), onAppBarState)
         }
 
         composable(
             showBottomMenu = false,
             destination = AlcoholDetailDestination
         ) {
-            FoodDetailScreen(navController, onAppBarState)
+            AlcoholDetailScreen(
+                navController,
+                alcoholComponent.getDetailsViewModel(),
+                onAppBarState
+            )
         }
     }
 

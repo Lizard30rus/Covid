@@ -44,7 +44,9 @@ dependencies {
 
         implementation(dagger)
         kapt(compiler)
+    }
 
-
+    with(Modules) {
+        implementation(project(core_common))
     }
 }

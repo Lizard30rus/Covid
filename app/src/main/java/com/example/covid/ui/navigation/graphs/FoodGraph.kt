@@ -11,11 +11,12 @@ import com.example.core_navigation.routes.screens.food.FoodListDestination
 import com.example.core_ui.composables.top_bar.states.AppBarState
 import com.example.feature_food.detail.FoodDetailScreen
 import com.example.feature_food.list.FoodListScreen
+import com.example.feature_food.list.FoodListViewModel
 
 fun NavGraphBuilder.foodGraph(
     context: Context,
     navController: NavController,
-    onAppBarState : (AppBarState) -> Unit
+    onAppBarState: (AppBarState) -> Unit,
 ) {
     navigation(FoodListDestination.route(), FoodEnterDestination.route()) {
 

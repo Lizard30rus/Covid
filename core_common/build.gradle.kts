@@ -1,11 +1,12 @@
 plugins {
     id(Plugins.androidLibrary)
     id(Plugins.kotlinAndroid)
+    id(Plugins.kotlinKapt)
 }
 
 android {
     namespace = "com.example.core_common"
-    compileSdk =  Release.compileSdk
+    compileSdk = Release.compileSdk
 
     defaultConfig {
         minSdk = Release.minSdk
@@ -31,6 +32,13 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.4.8"
+    }
 }
 
 dependencies {
@@ -39,5 +47,11 @@ dependencies {
         implementation(lifecycle)
         implementation(coroutines)
         implementation(appCompat)
+        implementation(activity)
+
+        implementation(dagger)
+        kapt(compiler)
+
+        implementation(composeViewModel)
     }
 }

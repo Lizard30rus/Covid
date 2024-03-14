@@ -1,6 +1,7 @@
 plugins {
     id(Plugins.androidLibrary)
     id(Plugins.kotlinAndroid)
+    id(Plugins.kotlinKapt)
 }
 
 android {
@@ -48,6 +49,9 @@ dependencies {
         implementation(activity)
         implementation(composeViewModel)
         implementation(navigationCompose)
+
+        implementation(dagger)
+        kapt(compiler)
 
         implementation(ui)
         implementation(uiToolingPreview)

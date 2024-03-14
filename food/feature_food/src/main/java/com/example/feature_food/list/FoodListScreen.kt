@@ -8,6 +8,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.core_common.utils.createUuid
 import com.example.core_food_api.enums.FoodType
@@ -20,7 +22,9 @@ import com.example.feature_food.list.views.FoodItem
 import java.util.Date
 
 @Composable
-fun FoodListScreen(navController: NavController, onAppBarState: (AppBarState) -> Unit) {
+fun FoodListScreen(
+    navController: NavController,
+    onAppBarState: (AppBarState) -> Unit) {
     onAppBarState(AppBarState.ShowTopAppBar {
         TopAppBar.Main(
             title = stringResource(R.string.food_list_title)

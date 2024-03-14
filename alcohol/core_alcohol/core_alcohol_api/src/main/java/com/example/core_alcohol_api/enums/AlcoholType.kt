@@ -7,4 +7,9 @@ enum class AlcoholType(val index : Int) {
     COCKTAIL(2),
 
     BEER(3);
+
+    companion object {
+        fun getByIndex(index: Int) = values().find { it.index == index }
+            ?: throw NoSuchElementException()
+    }
 }

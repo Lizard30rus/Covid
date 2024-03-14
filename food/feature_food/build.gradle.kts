@@ -49,6 +49,9 @@ dependencies {
         implementation(composeViewModel)
         implementation(navigationCompose)
 
+        implementation(dagger)
+        kapt(compiler)
+
         implementation(ui)
         implementation(uiToolingPreview)
         implementation(material3)

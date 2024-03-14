@@ -7,11 +7,15 @@ import com.example.core_navigation.composable
 import com.example.core_navigation.routes.screens.SplashScreenDestination
 import com.example.core_ui.composables.top_bar.states.AppBarState
 import com.example.covid.ui.views.SplashScreen
+import com.example.feature_alcohol.di.AlcoholComponent
+import com.example.feature_food.di.FoodComponent
 
 fun NavGraphBuilder.globalGraph(
     context: Context,
+    alcoholComponent: AlcoholComponent,
+    foodComponent: FoodComponent,
     navController: NavController,
-    onAppBarState: (AppBarState) -> Unit
+    onAppBarState: (AppBarState) -> Unit,
 ) {
     composable(
         showBottomMenu = false,
@@ -22,5 +26,5 @@ fun NavGraphBuilder.globalGraph(
 
     foodGraph(context, navController, onAppBarState)
     favoritesGraph(context, navController, onAppBarState)
-    alcoholGraph(context, navController, onAppBarState)
+    alcoholGraph(context, alcoholComponent, navController, onAppBarState)
 }
